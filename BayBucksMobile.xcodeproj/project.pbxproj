@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CA7D2621763BEFC00CE9063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7D2611763BEFC00CE9063 /* UIKit.framework */; };
+		7CA7D2641763BEFC00CE9063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7D2631763BEFC00CE9063 /* Foundation.framework */; };
+		7CA7D2661763BEFC00CE9063 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7D2651763BEFC00CE9063 /* CoreGraphics.framework */; };
+		7CA7D2681763BEFC00CE9063 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7D2671763BEFC00CE9063 /* CoreData.framework */; };
+		7CA7D26B1763BEFC00CE9063 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7D26A1763BEFC00CE9063 /* Podfile */; };
+		7CA7D2711763BEFC00CE9063 /* BayBucksMobileAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2701763BEFC00CE9063 /* BayBucksMobileAPIClient.m */; };
+		7CA7D2751763BEFC00CE9063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7D2731763BEFC00CE9063 /* InfoPlist.strings */; };
+		7CA7D2771763BEFC00CE9063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2761763BEFC00CE9063 /* main.m */; };
+		7CA7D27A1763BEFC00CE9063 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2791763BEFC00CE9063 /* BBAppDelegate.m */; };
+		7CA7D27C1763BEFC00CE9063 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7D27B1763BEFC00CE9063 /* Default.png */; };
+		7CA7D27E1763BEFC00CE9063 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7D27D1763BEFC00CE9063 /* Default@2x.png */; };
+		7CA7D2801763BEFC00CE9063 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7D27F1763BEFC00CE9063 /* Default-568h@2x.png */; };
+		7CA7D2841763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2821763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld */; };
+		7CA7D2871763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2861763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7CA7D25E1763BEFC00CE9063 /* BayBucksMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayBucksMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA7D2611763BEFC00CE9063 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7CA7D2631763BEFC00CE9063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7CA7D2651763BEFC00CE9063 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7CA7D2671763BEFC00CE9063 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7CA7D26A1763BEFC00CE9063 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		7CA7D26D1763BEFC00CE9063 /* BayBucksMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BayBucksMobile-Prefix.pch"; sourceTree = "<group>"; };
+		7CA7D26F1763BEFC00CE9063 /* BayBucksMobileAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BayBucksMobileAPIClient.h; path = Classes/BayBucksMobileAPIClient.h; sourceTree = "<group>"; };
+		7CA7D2701763BEFC00CE9063 /* BayBucksMobileAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BayBucksMobileAPIClient.m; path = Classes/BayBucksMobileAPIClient.m; sourceTree = "<group>"; };
+		7CA7D2721763BEFC00CE9063 /* BayBucksMobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BayBucksMobile-Info.plist"; sourceTree = "<group>"; };
+		7CA7D2741763BEFC00CE9063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7CA7D2761763BEFC00CE9063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7CA7D2781763BEFC00CE9063 /* BBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
+		7CA7D2791763BEFC00CE9063 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
+		7CA7D27B1763BEFC00CE9063 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7CA7D27D1763BEFC00CE9063 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7CA7D27F1763BEFC00CE9063 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7CA7D2831763BEFD00CE9063 /* BayBucksMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BayBucksMobile.xcdatamodel; sourceTree = "<group>"; };
+		7CA7D2851763BEFD00CE9063 /* BayBucksMobileIncrementalStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BayBucksMobileIncrementalStore.h; path = Classes/BayBucksMobileIncrementalStore.h; sourceTree = "<group>"; };
+		7CA7D2861763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BayBucksMobileIncrementalStore.m; path = Classes/BayBucksMobileIncrementalStore.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CA7D25B1763BEFC00CE9063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CA7D2621763BEFC00CE9063 /* UIKit.framework in Frameworks */,
+				7CA7D2641763BEFC00CE9063 /* Foundation.framework in Frameworks */,
+				7CA7D2661763BEFC00CE9063 /* CoreGraphics.framework in Frameworks */,
+				7CA7D2681763BEFC00CE9063 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CA7D2551763BEFC00CE9063 = {
+			isa = PBXGroup;
+			children = (
+				7CA7D2691763BEFC00CE9063 /* BayBucksMobile */,
+				7CA7D2601763BEFC00CE9063 /* Frameworks */,
+				7CA7D25F1763BEFC00CE9063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CA7D25F1763BEFC00CE9063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D25E1763BEFC00CE9063 /* BayBucksMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CA7D2601763BEFC00CE9063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D2611763BEFC00CE9063 /* UIKit.framework */,
+				7CA7D2631763BEFC00CE9063 /* Foundation.framework */,
+				7CA7D2651763BEFC00CE9063 /* CoreGraphics.framework */,
+				7CA7D2671763BEFC00CE9063 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CA7D2691763BEFC00CE9063 /* BayBucksMobile */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D26A1763BEFC00CE9063 /* Podfile */,
+				7CA7D2781763BEFC00CE9063 /* BBAppDelegate.h */,
+				7CA7D2791763BEFC00CE9063 /* BBAppDelegate.m */,
+				7CA7D26E1763BEFC00CE9063 /* Networking */,
+				7CA7D2811763BEFC00CE9063 /* Models */,
+				7CA7D26C1763BEFC00CE9063 /* Supporting Files */,
+			);
+			path = BayBucksMobile;
+			sourceTree = "<group>";
+		};
+		7CA7D26C1763BEFC00CE9063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D26D1763BEFC00CE9063 /* BayBucksMobile-Prefix.pch */,
+				7CA7D2721763BEFC00CE9063 /* BayBucksMobile-Info.plist */,
+				7CA7D2731763BEFC00CE9063 /* InfoPlist.strings */,
+				7CA7D2761763BEFC00CE9063 /* main.m */,
+				7CA7D27B1763BEFC00CE9063 /* Default.png */,
+				7CA7D27D1763BEFC00CE9063 /* Default@2x.png */,
+				7CA7D27F1763BEFC00CE9063 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CA7D26E1763BEFC00CE9063 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D26F1763BEFC00CE9063 /* BayBucksMobileAPIClient.h */,
+				7CA7D2701763BEFC00CE9063 /* BayBucksMobileAPIClient.m */,
+				7CA7D2851763BEFD00CE9063 /* BayBucksMobileIncrementalStore.h */,
+				7CA7D2861763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		7CA7D2811763BEFC00CE9063 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D2821763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CA7D25D1763BEFC00CE9063 /* BayBucksMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CA7D28A1763BEFD00CE9063 /* Build configuration list for PBXNativeTarget "BayBucksMobile" */;
+			buildPhases = (
+				7CA7D25A1763BEFC00CE9063 /* Sources */,
+				7CA7D25B1763BEFC00CE9063 /* Frameworks */,
+				7CA7D25C1763BEFC00CE9063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BayBucksMobile;
+			productName = BayBucksMobile;
+			productReference = 7CA7D25E1763BEFC00CE9063 /* BayBucksMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CA7D2561763BEFC00CE9063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = BayBucks;
+			};
+			buildConfigurationList = 7CA7D2591763BEFC00CE9063 /* Build configuration list for PBXProject "BayBucksMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7CA7D2551763BEFC00CE9063;
+			productRefGroup = 7CA7D25F1763BEFC00CE9063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CA7D25D1763BEFC00CE9063 /* BayBucksMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CA7D25C1763BEFC00CE9063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CA7D26B1763BEFC00CE9063 /* Podfile in Resources */,
+				7CA7D2751763BEFC00CE9063 /* InfoPlist.strings in Resources */,
+				7CA7D27C1763BEFC00CE9063 /* Default.png in Resources */,
+				7CA7D27E1763BEFC00CE9063 /* Default@2x.png in Resources */,
+				7CA7D2801763BEFC00CE9063 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CA7D25A1763BEFC00CE9063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CA7D2711763BEFC00CE9063 /* BayBucksMobileAPIClient.m in Sources */,
+				7CA7D2771763BEFC00CE9063 /* main.m in Sources */,
+				7CA7D27A1763BEFC00CE9063 /* BBAppDelegate.m in Sources */,
+				7CA7D2841763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld in Sources */,
+				7CA7D2871763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7CA7D2731763BEFC00CE9063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CA7D2741763BEFC00CE9063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CA7D2881763BEFD00CE9063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7CA7D2891763BEFD00CE9063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CA7D28B1763BEFD00CE9063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BayBucksMobile/BayBucksMobile-Prefix.pch";
+				INFOPLIST_FILE = "BayBucksMobile/BayBucksMobile-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7CA7D28C1763BEFD00CE9063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BayBucksMobile/BayBucksMobile-Prefix.pch";
+				INFOPLIST_FILE = "BayBucksMobile/BayBucksMobile-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CA7D2591763BEFC00CE9063 /* Build configuration list for PBXProject "BayBucksMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA7D2881763BEFD00CE9063 /* Debug */,
+				7CA7D2891763BEFD00CE9063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CA7D28A1763BEFD00CE9063 /* Build configuration list for PBXNativeTarget "BayBucksMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA7D28B1763BEFD00CE9063 /* Debug */,
+				7CA7D28C1763BEFD00CE9063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7CA7D2821763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CA7D2831763BEFD00CE9063 /* BayBucksMobile.xcdatamodel */,
+			);
+			currentVersion = 7CA7D2831763BEFD00CE9063 /* BayBucksMobile.xcdatamodel */;
+			path = BayBucksMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7CA7D2561763BEFC00CE9063 /* Project object */;
+}
