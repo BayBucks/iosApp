@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	
+	self.title = @"Bienvenue!";
+	self.view.backgroundColor = [UIColor belizeHoleColor];
+	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(dropOnboarding)];
 	// Do any additional setup after loading the view.
 }

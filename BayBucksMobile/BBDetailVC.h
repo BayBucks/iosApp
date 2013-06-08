@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BBDetailVC : UIViewController
+#import "AFNetworking.h"
+
+@interface BBDetailVC : UIViewController <UITextFieldDelegate>
 
 @end

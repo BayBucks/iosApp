@@ -21,9 +21,19 @@
 		7CA7D2801763BEFC00CE9063 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7D27F1763BEFC00CE9063 /* Default-568h@2x.png */; };
 		7CA7D2841763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2821763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld */; };
 		7CA7D2871763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2861763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m */; };
+		7CA7D28F1763C45500CE9063 /* BBBrowseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D28E1763C45500CE9063 /* BBBrowseVC.m */; };
+		7CA7D2941763C57100CE9063 /* BBDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2931763C57100CE9063 /* BBDetailVC.m */; };
+		7CA7D2971763C58E00CE9063 /* BBOnboardingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2961763C58E00CE9063 /* BBOnboardingVC.m */; };
+		7CEDB3021763C76600AC07BF /* BBNearbyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDB3011763C76600AC07BF /* BBNearbyVC.m */; };
+		7CEDB3051763C89800AC07BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEDB3041763C89800AC07BF /* MapKit.framework */; };
+		7CEDB3081763CDB900AC07BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEDB3071763CDB900AC07BF /* CoreLocation.framework */; };
+		7CEDB30A1763D04200AC07BF /* cookierebels.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CEDB3091763D04200AC07BF /* cookierebels.png */; };
+		7CEDB30D1763DEE300AC07BF /* BBNearbyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDB30C1763DEE300AC07BF /* BBNearbyCell.m */; };
+		B8A4D5BA771148DBB7B6672D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DD892BD1784F03B93BFB10 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67DD892BD1784F03B93BFB10 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA7D25E1763BEFC00CE9063 /* BayBucksMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayBucksMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA7D2611763BEFC00CE9063 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CA7D2631763BEFC00CE9063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +54,21 @@
 		7CA7D2831763BEFD00CE9063 /* BayBucksMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BayBucksMobile.xcdatamodel; sourceTree = "<group>"; };
 		7CA7D2851763BEFD00CE9063 /* BayBucksMobileIncrementalStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BayBucksMobileIncrementalStore.h; path = Classes/BayBucksMobileIncrementalStore.h; sourceTree = "<group>"; };
 		7CA7D2861763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BayBucksMobileIncrementalStore.m; path = Classes/BayBucksMobileIncrementalStore.m; sourceTree = "<group>"; };
+		7CA7D28D1763C45500CE9063 /* BBBrowseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBrowseVC.h; sourceTree = "<group>"; };
+		7CA7D28E1763C45500CE9063 /* BBBrowseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBrowseVC.m; sourceTree = "<group>"; };
+		7CA7D2921763C57100CE9063 /* BBDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDetailVC.h; sourceTree = "<group>"; };
+		7CA7D2931763C57100CE9063 /* BBDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDetailVC.m; sourceTree = "<group>"; };
+		7CA7D2951763C58E00CE9063 /* BBOnboardingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOnboardingVC.h; sourceTree = "<group>"; };
+		7CA7D2961763C58E00CE9063 /* BBOnboardingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOnboardingVC.m; sourceTree = "<group>"; };
+		7CEDB3001763C76600AC07BF /* BBNearbyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNearbyVC.h; sourceTree = "<group>"; };
+		7CEDB3011763C76600AC07BF /* BBNearbyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNearbyVC.m; sourceTree = "<group>"; };
+		7CEDB3031763C7FB00AC07BF /* FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlatUI.h; path = Classes/FlatUI.h; sourceTree = "<group>"; };
+		7CEDB3041763C89800AC07BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7CEDB3071763CDB900AC07BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7CEDB3091763D04200AC07BF /* cookierebels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookierebels.png; sourceTree = "<group>"; };
+		7CEDB30B1763DEE300AC07BF /* BBNearbyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNearbyCell.h; sourceTree = "<group>"; };
+		7CEDB30C1763DEE300AC07BF /* BBNearbyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNearbyCell.m; sourceTree = "<group>"; };
+		DB8B575DB5E74837BF390868 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +76,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CEDB3081763CDB900AC07BF /* CoreLocation.framework in Frameworks */,
+				7CEDB3051763C89800AC07BF /* MapKit.framework in Frameworks */,
 				7CA7D2621763BEFC00CE9063 /* UIKit.framework in Frameworks */,
 				7CA7D2641763BEFC00CE9063 /* Foundation.framework in Frameworks */,
 				7CA7D2661763BEFC00CE9063 /* CoreGraphics.framework in Frameworks */,
 				7CA7D2681763BEFC00CE9063 /* CoreData.framework in Frameworks */,
+				B8A4D5BA771148DBB7B6672D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +92,12 @@
 		7CA7D2551763BEFC00CE9063 = {
 			isa = PBXGroup;
 			children = (
+				7CEDB3071763CDB900AC07BF /* CoreLocation.framework */,
+				7CEDB3041763C89800AC07BF /* MapKit.framework */,
 				7CA7D2691763BEFC00CE9063 /* BayBucksMobile */,
 				7CA7D2601763BEFC00CE9063 /* Frameworks */,
 				7CA7D25F1763BEFC00CE9063 /* Products */,
+				DB8B575DB5E74837BF390868 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +116,7 @@
 				7CA7D2631763BEFC00CE9063 /* Foundation.framework */,
 				7CA7D2651763BEFC00CE9063 /* CoreGraphics.framework */,
 				7CA7D2671763BEFC00CE9063 /* CoreData.framework */,
+				67DD892BD1784F03B93BFB10 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,8 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				7CA7D26A1763BEFC00CE9063 /* Podfile */,
+				7CEDB3031763C7FB00AC07BF /* FlatUI.h */,
 				7CA7D2781763BEFC00CE9063 /* BBAppDelegate.h */,
 				7CA7D2791763BEFC00CE9063 /* BBAppDelegate.m */,
+				7CEDB3061763CB6F00AC07BF /* View Controllers */,
 				7CA7D26E1763BEFC00CE9063 /* Networking */,
 				7CA7D2811763BEFC00CE9063 /* Models */,
 				7CA7D26C1763BEFC00CE9063 /* Supporting Files */,
@@ -105,6 +139,7 @@
 		7CA7D26C1763BEFC00CE9063 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7CEDB3091763D04200AC07BF /* cookierebels.png */,
 				7CA7D26D1763BEFC00CE9063 /* BayBucksMobile-Prefix.pch */,
 				7CA7D2721763BEFC00CE9063 /* BayBucksMobile-Info.plist */,
 				7CA7D2731763BEFC00CE9063 /* InfoPlist.strings */,
@@ -135,6 +170,23 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		7CEDB3061763CB6F00AC07BF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D2951763C58E00CE9063 /* BBOnboardingVC.h */,
+				7CA7D2961763C58E00CE9063 /* BBOnboardingVC.m */,
+				7CA7D28D1763C45500CE9063 /* BBBrowseVC.h */,
+				7CA7D28E1763C45500CE9063 /* BBBrowseVC.m */,
+				7CEDB3001763C76600AC07BF /* BBNearbyVC.h */,
+				7CEDB3011763C76600AC07BF /* BBNearbyVC.m */,
+				7CA7D2921763C57100CE9063 /* BBDetailVC.h */,
+				7CA7D2931763C57100CE9063 /* BBDetailVC.m */,
+				7CEDB30B1763DEE300AC07BF /* BBNearbyCell.h */,
+				7CEDB30C1763DEE300AC07BF /* BBNearbyCell.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CA7D28A1763BEFD00CE9063 /* Build configuration list for PBXNativeTarget "BayBucksMobile" */;
 			buildPhases = (
+				62A9DE08D44E40F1B1CBFF44 /* Check Pods Manifest.lock */,
 				7CA7D25A1763BEFC00CE9063 /* Sources */,
 				7CA7D25B1763BEFC00CE9063 /* Frameworks */,
 				7CA7D25C1763BEFC00CE9063 /* Resources */,
+				5AB04818530A47FB96CA0535 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,10 +246,42 @@
 				7CA7D27C1763BEFC00CE9063 /* Default.png in Resources */,
 				7CA7D27E1763BEFC00CE9063 /* Default@2x.png in Resources */,
 				7CA7D2801763BEFC00CE9063 /* Default-568h@2x.png in Resources */,
+				7CEDB30A1763D04200AC07BF /* cookierebels.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AB04818530A47FB96CA0535 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		62A9DE08D44E40F1B1CBFF44 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7CA7D25A1763BEFC00CE9063 /* Sources */ = {
@@ -207,6 +293,11 @@
 				7CA7D27A1763BEFC00CE9063 /* BBAppDelegate.m in Sources */,
 				7CA7D2841763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld in Sources */,
 				7CA7D2871763BEFD00CE9063 /* BayBucksMobileIncrementalStore.m in Sources */,
+				7CA7D28F1763C45500CE9063 /* BBBrowseVC.m in Sources */,
+				7CA7D2941763C57100CE9063 /* BBDetailVC.m in Sources */,
+				7CA7D2971763C58E00CE9063 /* BBOnboardingVC.m in Sources */,
+				7CEDB3021763C76600AC07BF /* BBNearbyVC.m in Sources */,
+				7CEDB30D1763DEE300AC07BF /* BBNearbyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +373,7 @@
 		};
 		7CA7D28B1763BEFD00CE9063 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8B575DB5E74837BF390868 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BayBucksMobile/BayBucksMobile-Prefix.pch";
@@ -293,6 +385,7 @@
 		};
 		7CA7D28C1763BEFD00CE9063 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8B575DB5E74837BF390868 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BayBucksMobile/BayBucksMobile-Prefix.pch";
@@ -321,6 +414,7 @@
 				7CA7D28C1763BEFD00CE9063 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
