@@ -8,7 +8,10 @@
 
 #import "BBAppDelegate.h"
 
+#import "BBNearbyVC.h"
+
 #import "AFNetworkActivityIndicatorManager.h"
+#import "AFHTTPRequestOperationLogger.h"
 
 @implementation BBAppDelegate
 
@@ -23,9 +26,16 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [NSURLCache setSharedURLCache:URLCache];
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+	[[AFHTTPRequestOperationLogger sharedLogger] startLogging];
     
-    UIViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+	BBNearbyVC *nearbyVC = [[BBNearbyVC alloc] init];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:nearbyVC];
+	
+	// Global Appearance setup methods
+	[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackOpaque;
+	[[UINavigationBar appearance] configureFlatNavigationBarWithColor:[UIColor colorWithRed:46.0/255.0 green:204.0/255.0 blue:113.0/255.0 alpha:1.0]]; // TEMP - only works for iOS 5.0+
+	[UIBarButtonItem configureFlatButtonsWithColor:[UIColor turquoiseColor] highlightedColor:[UIColor belizeHoleColor] cornerRadius:3];  // TEMP - only works for iOS 5.0+
+
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
@@ -59,6 +69,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	// Saves changes in the application's managed object context before the application terminates.
+	[[AFHTTPRequestOperationLogger sharedLogger] stopLogging];
 	[self saveContext];
 }
 
