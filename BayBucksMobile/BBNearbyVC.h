@@ -11,6 +11,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import "BBNearbyCell.h"
 
-@interface BBNearbyVC : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface BBNearbyVC : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, CLLocationManagerDelegate>
 
 @end

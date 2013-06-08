@@ -32,6 +32,8 @@
 
 - (void)setupUI
 {
+	self.contentView.backgroundColor = [UIColor cloudsColor];
+	
 	self.merchantName = [[UILabel alloc] initWithFrame:CGRectMake(100, 5, 210, 30)];
 	merchantName.backgroundColor = [UIColor clearColor];
 	merchantName.font = [UIFont boldFlatFontOfSize:16];
@@ -43,7 +45,7 @@
 	[self.contentView addSubview:locationLabel];
 	
 	self.cellImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 80, 80)];
-	cellImageView.backgroundColor = [UIColor clearColor];
+	cellImageView.backgroundColor = [UIColor sunflowerColor];
 	cellImageView.contentMode = UIViewContentModeScaleToFill;
 	[self.contentView addSubview:cellImageView];
 

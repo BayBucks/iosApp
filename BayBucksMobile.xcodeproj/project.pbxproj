@@ -29,6 +29,7 @@
 		7CEDB3081763CDB900AC07BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEDB3071763CDB900AC07BF /* CoreLocation.framework */; };
 		7CEDB30A1763D04200AC07BF /* cookierebels.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CEDB3091763D04200AC07BF /* cookierebels.png */; };
 		7CEDB30D1763DEE300AC07BF /* BBNearbyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDB30C1763DEE300AC07BF /* BBNearbyCell.m */; };
+		7CEDB30F1763E4C500AC07BF /* whiteCart 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CEDB30E1763E4C500AC07BF /* whiteCart 2.png */; };
 		B8A4D5BA771148DBB7B6672D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DD892BD1784F03B93BFB10 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		7CEDB3091763D04200AC07BF /* cookierebels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookierebels.png; sourceTree = "<group>"; };
 		7CEDB30B1763DEE300AC07BF /* BBNearbyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNearbyCell.h; sourceTree = "<group>"; };
 		7CEDB30C1763DEE300AC07BF /* BBNearbyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNearbyCell.m; sourceTree = "<group>"; };
+		7CEDB30E1763E4C500AC07BF /* whiteCart 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteCart 2.png"; sourceTree = "<group>"; };
 		DB8B575DB5E74837BF390868 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 		7CA7D26C1763BEFC00CE9063 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7CEDB30E1763E4C500AC07BF /* whiteCart 2.png */,
 				7CEDB3091763D04200AC07BF /* cookierebels.png */,
 				7CA7D26D1763BEFC00CE9063 /* BayBucksMobile-Prefix.pch */,
 				7CA7D2721763BEFC00CE9063 /* BayBucksMobile-Info.plist */,
@@ -247,6 +250,7 @@
 				7CA7D27E1763BEFC00CE9063 /* Default@2x.png in Resources */,
 				7CA7D2801763BEFC00CE9063 /* Default-568h@2x.png in Resources */,
 				7CEDB30A1763D04200AC07BF /* cookierebels.png in Resources */,
+				7CEDB30F1763E4C500AC07BF /* whiteCart 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,8 @@
 
 @property UITableView *nearbyTableView;
 @property MKMapView *nearbyMapView;
-@property UISearchBar *searchBar;
+@property UISearchBar *merchantSearchBar;
+@property CLLocationManager *locationManager;
 
 @end
 
@@ -23,7 +24,8 @@
 
 @synthesize nearbyTableView;
 @synthesize nearbyMapView;
-@synthesize searchBar;
+@synthesize merchantSearchBar;
+@synthesize locationManager;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,17 +41,19 @@
 {
     [super viewDidLoad];
 
-	self.title = @"Baybucks around you";
+	self.title = @"BayBuck";
 	
 	// if first login
 	BBOnboardingVC *onboardingVC = [[BBOnboardingVC alloc] init];
 	UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:onboardingVC];
 	[self presentViewController:navCon animated:NO completion:nil];
 	
+//	[self setupMapView]; // Map turned off until location
 	[self setupSearchBar];
-	[self setupMapView];
 	[self setupTableView];
-
+	
+//	self.locationManager = [[CLLocationManager alloc] init];
+//	[locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,20 +70,34 @@
 	if(selectionPath) [nearbyTableView deselectRowAtIndexPath:selectionPath animated:YES];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+//	[locationManager stopUpdatingLocation];
+}
+
 #pragma mark - View setup
 
 - (void)setupSearchBar
 {
-	self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
-	searchBar.placeholder = @"Find participating shops...";
-	searchBar.delegate = self;
-	[self.view addSubview:searchBar];
+	self.merchantSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
+	merchantSearchBar.placeholder = @"Find participating shops...";
+	merchantSearchBar.delegate = self;
+	merchantSearchBar.backgroundColor = [UIColor carrotColor];
+	[self.view addSubview:merchantSearchBar];
 	
+	// Flip through the searchBar subviews to remove the search bar background.
+	for (UIView *subview in merchantSearchBar.subviews) {
+		if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
+			[subview removeFromSuperview];
+			break;
+		}
+	}
 }
 
 - (void)setupMapView
 {
-	self.nearbyMapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 40, self.view.bounds.size.width, 150)];
+	self.nearbyMapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 190)];
 	nearbyMapView.delegate = self;
 	nearbyMapView.userInteractionEnabled = YES;
 	nearbyMapView.showsUserLocation = YES;
@@ -91,7 +109,7 @@
 
 - (void)setupTableView
 {
-	self.nearbyTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150 + 40, self.view.bounds.size.width, self.view.bounds.size.height - 150 - 40 - 44) style:UITableViewStylePlain];
+	self.nearbyTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.bounds.size.width, self.view.bounds.size.height - 44) style:UITableViewStylePlain]; // CGRectMake(0, 150 + 40, self.view.bounds.size.width, self.view.bounds.size.height - 190 - 44)
 	nearbyTableView.rowHeight = 90;
 	nearbyTableView.delegate = self;
 	nearbyTableView.dataSource = self;
@@ -99,11 +117,22 @@
 }
 
 #pragma mark - User Action methods
+// Searchbar stuff here
+
+#pragma mark - SearchBar Delegate methods
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+	[searchBar resignFirstResponder];
+}
+
+//- (UISearchDisplayController *)searchDisplayController // Definitely use this!!!
 
 
-
-
-
+#pragma mark - CLLocationManager
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+	nearbyMapView.region = MKCoordinateRegionMake(locationManager.location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+}
 
 
 #pragma mark - Table view data source
@@ -131,71 +160,36 @@
         cell = [[BBNearbyCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
-
 	cell.merchantName.text = @"Taco Loco";
 	cell.locationLabel.text = @"745 First St.";
-	cell.cellImageView.image = [UIImage imageNamed:@"cookierebels"];
-	
-//	cell.textLabel.text = @"Ron Paul would love Bay Bucks";
-//	cell.detailTextLabel.text = @"Tho he prefers gold, obviously";
-//	cell.imageView.image = [UIImage imageNamed:@"cookierebels"];
+	cell.cellImageView.image = [UIImage imageNamed:@"whiteCart 2"];
     
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-	return @"Establishments:";
+	UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
+	headerView.backgroundColor = [UIColor turquoiseColor];
+	
+	UILabel *headerTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, 25)];
+	headerTitle.backgroundColor = [UIColor clearColor];
+	headerTitle.font = [UIFont boldFlatFontOfSize:16];
+	headerTitle.textColor = [UIColor cloudsColor];
+	headerTitle.shadowColor = [UIColor greenSeaColor];
+	headerTitle.shadowOffset = CGSizeMake(1.0, 1.0);
+	headerTitle.text = @"Establishments:";
+	
+	[headerView addSubview:headerTitle];
+	return headerView;
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
 	BBDetailVC *detailVC = [[BBDetailVC alloc] init];
 	[self.navigationController pushViewController:detailVC animated:YES];
-	
 	
 }
 
