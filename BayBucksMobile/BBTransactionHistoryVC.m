@@ -1,17 +1,20 @@
 //
-//  BBNearbyVC.m
+//  BBTransactionHistoryVC.m
 //  BayBucksMobile
 //
 //  Created by WM on 6/8/13.
 //  Copyright (c) 2013 BayBucks. All rights reserved.
 //
 
+#import "BBTransactionHistoryVC.h"
+
 #import "BBNearbyVC.h"
 #import "BBOnboardingVC.h"
 #import "BBDetailVC.h"
 
 
-@interface BBNearbyVC ()
+@interface BBTransactionHistoryVC ()
+
 
 @property UITableView *nearbyTableView;
 @property MKMapView *nearbyMapView;
@@ -20,7 +23,7 @@
 
 @end
 
-@implementation BBNearbyVC
+@implementation BBTransactionHistoryVC
 
 @synthesize nearbyTableView;
 @synthesize nearbyMapView;
@@ -40,20 +43,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-	self.title = @"BayBuckz";
+	
+	self.title = @"Transaction History";
 	
 	// if first login
 	BBOnboardingVC *onboardingVC = [[BBOnboardingVC alloc] init];
 	UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:onboardingVC];
 	[self presentViewController:navCon animated:NO completion:nil];
 	
-//	[self setupMapView]; // Map turned off until location information available
-	[self setupSearchBar];
 	[self setupTableView];
-	
-//	self.locationManager = [[CLLocationManager alloc] init];
-//	[locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,39 +71,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
-//	[locationManager stopUpdatingLocation];
 }
 
 #pragma mark - View setup
-
-- (void)setupSearchBar
-{
-	self.merchantSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
-	merchantSearchBar.placeholder = @"Find participating shops...";
-	merchantSearchBar.delegate = self;
-	merchantSearchBar.backgroundColor = [UIColor carrotColor];
-	[self.view addSubview:merchantSearchBar];
-	
-	// Flip through the searchBar subviews to remove the search bar background.
-	for (UIView *subview in merchantSearchBar.subviews) {
-		if ([subview isKindOfClass:NSClassFromString(@"UISearchBarBackground")]) {
-			[subview removeFromSuperview];
-			break;
-		}
-	}
-}
-
-- (void)setupMapView
-{
-	self.nearbyMapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 190)];
-	nearbyMapView.delegate = self;
-	nearbyMapView.userInteractionEnabled = YES;
-	nearbyMapView.showsUserLocation = YES;
-	nearbyMapView.scrollEnabled = YES;
-	nearbyMapView.mapType = MKMapTypeStandard;
-	nearbyMapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.0, -122.0), MKCoordinateSpanMake(0.50, 0.50));
-	[self.view addSubview:nearbyMapView];
-}
 
 - (void)setupTableView
 {
@@ -117,22 +85,7 @@
 }
 
 #pragma mark - User Action methods
-// Searchbar stuff here
-
-#pragma mark - SearchBar Delegate methods
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
-	[searchBar resignFirstResponder];
-}
-
-//- (UISearchDisplayController *)searchDisplayController // Definitely use this!!!
-
-
-#pragma mark - CLLocationManager
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-	nearbyMapView.region = MKCoordinateRegionMake(locationManager.location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
-}
+// other user actions here
 
 
 #pragma mark - Table view data source
@@ -188,8 +141,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	BBDetailVC *detailVC = [[BBDetailVC alloc] init];
-	[self.navigationController pushViewController:detailVC animated:YES];
+	// do something
+	
 	
 }
 

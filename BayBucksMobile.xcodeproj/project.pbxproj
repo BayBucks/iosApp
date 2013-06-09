@@ -24,6 +24,9 @@
 		7CA7D28F1763C45500CE9063 /* BBBrowseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D28E1763C45500CE9063 /* BBBrowseVC.m */; };
 		7CA7D2941763C57100CE9063 /* BBDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2931763C57100CE9063 /* BBDetailVC.m */; };
 		7CA7D2971763C58E00CE9063 /* BBOnboardingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7D2961763C58E00CE9063 /* BBOnboardingVC.m */; };
+		7CD096981763F06300ED0BCD /* BBTransactionHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD096971763F06300ED0BCD /* BBTransactionHistoryVC.m */; };
+		7CD0969B1763F17600ED0BCD /* BBMerchant.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0969A1763F17600ED0BCD /* BBMerchant.m */; };
+		7CD0969E1763F1BC00ED0BCD /* BBTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0969D1763F1BC00ED0BCD /* BBTransaction.m */; };
 		7CEDB3021763C76600AC07BF /* BBNearbyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEDB3011763C76600AC07BF /* BBNearbyVC.m */; };
 		7CEDB3051763C89800AC07BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEDB3041763C89800AC07BF /* MapKit.framework */; };
 		7CEDB3081763CDB900AC07BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEDB3071763CDB900AC07BF /* CoreLocation.framework */; };
@@ -61,6 +64,12 @@
 		7CA7D2931763C57100CE9063 /* BBDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDetailVC.m; sourceTree = "<group>"; };
 		7CA7D2951763C58E00CE9063 /* BBOnboardingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOnboardingVC.h; sourceTree = "<group>"; };
 		7CA7D2961763C58E00CE9063 /* BBOnboardingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOnboardingVC.m; sourceTree = "<group>"; };
+		7CD096961763F06300ED0BCD /* BBTransactionHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTransactionHistoryVC.h; sourceTree = "<group>"; };
+		7CD096971763F06300ED0BCD /* BBTransactionHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTransactionHistoryVC.m; sourceTree = "<group>"; };
+		7CD096991763F17600ED0BCD /* BBMerchant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBMerchant.h; sourceTree = "<group>"; };
+		7CD0969A1763F17600ED0BCD /* BBMerchant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBMerchant.m; sourceTree = "<group>"; };
+		7CD0969C1763F1BC00ED0BCD /* BBTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTransaction.h; sourceTree = "<group>"; };
+		7CD0969D1763F1BC00ED0BCD /* BBTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTransaction.m; sourceTree = "<group>"; };
 		7CEDB3001763C76600AC07BF /* BBNearbyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNearbyVC.h; sourceTree = "<group>"; };
 		7CEDB3011763C76600AC07BF /* BBNearbyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNearbyVC.m; sourceTree = "<group>"; };
 		7CEDB3031763C7FB00AC07BF /* FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlatUI.h; path = Classes/FlatUI.h; sourceTree = "<group>"; };
@@ -169,6 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				7CA7D2821763BEFD00CE9063 /* BayBucksMobile.xcdatamodeld */,
+				7CD096991763F17600ED0BCD /* BBMerchant.h */,
+				7CD0969A1763F17600ED0BCD /* BBMerchant.m */,
+				7CD0969C1763F1BC00ED0BCD /* BBTransaction.h */,
+				7CD0969D1763F1BC00ED0BCD /* BBTransaction.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -180,6 +193,8 @@
 				7CA7D2961763C58E00CE9063 /* BBOnboardingVC.m */,
 				7CA7D28D1763C45500CE9063 /* BBBrowseVC.h */,
 				7CA7D28E1763C45500CE9063 /* BBBrowseVC.m */,
+				7CD096961763F06300ED0BCD /* BBTransactionHistoryVC.h */,
+				7CD096971763F06300ED0BCD /* BBTransactionHistoryVC.m */,
 				7CEDB3001763C76600AC07BF /* BBNearbyVC.h */,
 				7CEDB3011763C76600AC07BF /* BBNearbyVC.m */,
 				7CA7D2921763C57100CE9063 /* BBDetailVC.h */,
@@ -302,6 +317,9 @@
 				7CA7D2971763C58E00CE9063 /* BBOnboardingVC.m in Sources */,
 				7CEDB3021763C76600AC07BF /* BBNearbyVC.m in Sources */,
 				7CEDB30D1763DEE300AC07BF /* BBNearbyCell.m in Sources */,
+				7CD096981763F06300ED0BCD /* BBTransactionHistoryVC.m in Sources */,
+				7CD0969B1763F17600ED0BCD /* BBMerchant.m in Sources */,
+				7CD0969E1763F1BC00ED0BCD /* BBTransaction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

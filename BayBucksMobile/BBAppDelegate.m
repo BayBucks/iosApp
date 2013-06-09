@@ -10,6 +10,7 @@
 
 #import "BBNearbyVC.h"
 
+#import "BayBucksMobileAPIClient.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "AFHTTPRequestOperationLogger.h"
 
@@ -27,6 +28,24 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 	[[AFHTTPRequestOperationLogger sharedLogger] startLogging];
+	[[AFHTTPRequestOperationLogger sharedLogger] setLevel:AFLoggerLevelDebug];
+	
+	
+	NSString * kUserName = @"tanchongkee@gmail.com";
+	NSString * kPassword = @"BayBucks2012";
+	NSString * kSiteKey = @"b20833a28e74cbbed853c3daddb8aeffc6077f93";
+	
+	[[BayBucksMobileAPIClient sharedClient] postPath:nil
+										  parameters:[NSDictionary dictionaryWithObjectsAndKeys:
+													  @"login", kUserName,
+													  @"password", kPassword,
+													  @"site_key", kSiteKey,
+													  nil]
+											 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+												 NSLog(@"Success: %@", responseObject);
+										  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+											  NSLog(@"Failure: %@", error);
+										  }];
     
 	BBNearbyVC *nearbyVC = [[BBNearbyVC alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:nearbyVC];

@@ -36,8 +36,6 @@
 	
 	self.title = @"Some establishment!";
 	
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(confirmButtonPressed)];
-	
 	[self setupUI];
 	
 }
