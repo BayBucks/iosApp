@@ -30,6 +30,15 @@
 	self.title = @"Bienvenue!";
 	self.view.backgroundColor = [UIColor belizeHoleColor];
 	
+	UITextView *onboarding = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+	onboarding.center = self.view.center;
+	onboarding.backgroundColor = [UIColor clearColor];
+	onboarding.text = @"This is where the onboarding would go!";
+	onboarding.textAlignment = NSTextAlignmentCenter;
+	onboarding.textColor = [UIColor cloudsColor];
+	onboarding.font = [UIFont boldFlatFontOfSize:30];
+	[self.view addSubview:onboarding];
+	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(dropOnboarding)];
 	// Do any additional setup after loading the view.
 }
