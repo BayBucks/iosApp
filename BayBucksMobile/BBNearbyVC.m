@@ -48,12 +48,14 @@
 	UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:onboardingVC];
 	[self presentViewController:navCon animated:NO completion:nil];
 	
-//	[self setupMapView]; // Map turned off until location information available
+	[self setupMapView]; // Map turned off until location information available
 	[self setupSearchBar];
 	[self setupTableView];
 	
-//	self.locationManager = [[CLLocationManager alloc] init];
-//	[locationManager startUpdatingLocation];
+	self.locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = self;
+	[locationManager startUpdatingLocation];
+		
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +75,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
-//	[locationManager stopUpdatingLocation];
+	[locationManager stopUpdatingLocation];
 }
 
 #pragma mark - View setup
@@ -109,7 +111,7 @@
 
 - (void)setupTableView
 {
-	self.nearbyTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.bounds.size.width, self.view.bounds.size.height - 44) style:UITableViewStylePlain]; // CGRectMake(0, 150 + 40, self.view.bounds.size.width, self.view.bounds.size.height - 190 - 44)
+	self.nearbyTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150 + 40, self.view.bounds.size.width, self.view.bounds.size.height -  190) style:UITableViewStylePlain]; // CGRectMake(0, 150 + 40, self.view.bounds.size.width, self.view.bounds.size.height - 190 - 44)
 	nearbyTableView.rowHeight = 90;
 	nearbyTableView.delegate = self;
 	nearbyTableView.dataSource = self;
@@ -131,9 +133,11 @@
 #pragma mark - CLLocationManager
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-	nearbyMapView.region = MKCoordinateRegionMake(locationManager.location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+//	nearbyMapView.region = MKCoordinateRegionMake(locationManager.location.coordinate, MKCoordinateSpanMake(0.05, 0.05));
+	[nearbyMapView setRegion:MKCoordinateRegionMake(locationManager.location.coordinate, MKCoordinateSpanMake(0.05, 0.05)) animated:YES];
+	
+	// temp - we need to turn this off lest it drain the battery.
 }
-
 
 #pragma mark - Table view data source
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BayBucksMobileAPIClient.h"
 
 @interface BBOnboardingVC : UIViewController
 

@@ -37,7 +37,6 @@
 	self.title = @"Some establishment!";
 	
 	[self setupUI];
-	
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -159,8 +158,8 @@
 	
 	[self.navigationController popToRootViewControllerAnimated:YES];
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Huzzah" message:@"Congrats! You've sent some cash money to some person!" delegate:self cancelButtonTitle:@"Hooah!" otherButtonTitles:nil];
-	[alert show]; // TEMP obviously
+//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Huzzah" message:@"Congrats! You've sent some cash money to some person!" delegate:self cancelButtonTitle:@"Hooah!" otherButtonTitles:nil];
+//	[alert show]; // TEMP obviously
 	
 	if([amountTextField isFirstResponder]) [amountTextField resignFirstResponder];
 }

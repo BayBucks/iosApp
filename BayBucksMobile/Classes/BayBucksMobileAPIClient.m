@@ -1,7 +1,6 @@
 #import "BayBucksMobileAPIClient.h"
 #import "AFJSONRequestOperation.h"
 
-static NSString * const kBayBucksMobileAPIBaseURLString = @"https://bay-bucks.nextrade360.com/api/v1/session.json";
 
 @implementation BayBucksMobileAPIClient
 
@@ -21,13 +20,8 @@ static NSString * const kBayBucksMobileAPIBaseURLString = @"https://bay-bucks.ne
         return nil;
     }
     
-	NSString * kUserName = @"tanchongkee@gmail.com";
-	NSString * kPassword = @"BayBucks2012";
-	
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self setDefaultHeader:@"Accept" value:@"application/json"];
-	[self setParameterEncoding:AFJSONParameterEncoding];
-	[self setAuthorizationHeaderWithUsername:kUserName password:kPassword];
     
     return self;
 }

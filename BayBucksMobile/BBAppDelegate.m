@@ -30,23 +30,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 	[[AFHTTPRequestOperationLogger sharedLogger] startLogging];
 	[[AFHTTPRequestOperationLogger sharedLogger] setLevel:AFLoggerLevelDebug];
 	
-	//// TEMP ////
-	NSString * kUserName = @"tanchongkee@gmail.com";
-	NSString * kPassword = @"BayBucks2012";
-	NSString * kSiteKey = @"b20833a28e74cbbed853c3daddb8aeffc6077f93";
-	
-	[[BayBucksMobileAPIClient sharedClient] postPath:nil
-										  parameters:[NSDictionary dictionaryWithObjectsAndKeys:
-													  @"login", kUserName,
-													  @"password", kPassword,
-													  @"site_key", kSiteKey,
-													  nil]
-											 success:^(AFHTTPRequestOperation *operation, id responseObject) {
-												 NSLog(@"Success: %@", responseObject);
-										  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-											  NSLog(@"Failure: %@", error);
-										  }];
-    ////// TEMP //////
 	
 	BBNearbyVC *nearbyVC = [[BBNearbyVC alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:nearbyVC];
@@ -62,6 +45,20 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)storeUserKey:(NSString *)keyString
+{
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults setObject:keyString forKey:@"user_session_key"];
+	[userDefaults synchronize];
+}
+
+- (void)storeUserInfo:(NSDictionary *)infoDict
+{
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults setObject:infoDict forKey:@"user_info_dict"];
+	[userDefaults synchronize];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
